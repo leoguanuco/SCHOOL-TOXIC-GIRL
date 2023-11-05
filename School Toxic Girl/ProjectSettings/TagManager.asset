@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Fondo
+    uniqueID: 85925257
+    locked: 0
+  - name: Player
+    uniqueID: 3303957263
+    locked: 0
