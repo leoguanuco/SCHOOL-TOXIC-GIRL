@@ -8,7 +8,6 @@ public class CorrutinasNPC : MonoBehaviour
     [SerializeField] private GameObject cat;
     [SerializeField] private Transform[] puntosDeControl;
     [SerializeField] private float velocidad = 5f;
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine("RealizarMovimiento");

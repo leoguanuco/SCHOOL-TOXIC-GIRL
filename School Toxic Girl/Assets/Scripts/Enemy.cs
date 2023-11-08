@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] private float vida;
     public GameObject Chico;
     public GameObject Toxica;
-    //private float LastShoot;
     public Animator ani;
     public int direccion;
     public float speed_run;
@@ -20,7 +20,19 @@ public class Enemy : MonoBehaviour
     {
         ani = GetComponent<Animator>();
     }
-
+    public void TomarDaño(float daño)
+    {
+        vida -= daño;
+        if(vida<=0)
+        {
+            Muerte();
+            speed_run = 0f;
+        }
+    }
+    private void Muerte()
+    {
+        ani.SetTrigger("die");
+    }
     public void Final_Ani()
     {
         ani.SetBool("attack", false);
@@ -39,14 +51,6 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         Comportamientos();
-
-        /*float distance = Mathf.Abs(Toxica.transform.position.x - transform.position.x);
-
-        if (distance < 2.0f && Time.time > LastShoot + 0.25f)
-        {
-            Shoot();
-            LastShoot = Time.time;
-        }*/
     }
     public void Comportamientos()
     {
@@ -54,19 +58,16 @@ public class Enemy : MonoBehaviour
         {
             if (transform.position.x < Chico.transform.position.x)
             {
-                //ani.SetBool("walk", false);
                 ani.SetBool("isRun", true);
                 transform.Translate(Vector3.right * speed_run * Time.deltaTime);
                 transform.rotation = Quaternion.Euler(0, 0, 0);
-                //ani.SetBool("attack", false);
             }
             else
             {
-                //ani.SetBool("walk", false);
                 ani.SetBool("isRun", true);
                 transform.Translate(Vector3.right * speed_run * Time.deltaTime);
                 transform.rotation = Quaternion.Euler(0, 180, 0);
-                //ani.SetBool("attack", false);
+                ani.SetBool("attack", false);
             }
         }
         else

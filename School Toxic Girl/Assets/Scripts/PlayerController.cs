@@ -122,7 +122,7 @@ namespace ClearSky
             rb.AddForce(jumpVelocity, ForceMode2D.Impulse);
             isJumping = false;
         }
-        void Attack()
+        public void Attack()
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
