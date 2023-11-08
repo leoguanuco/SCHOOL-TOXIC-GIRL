@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - PJ
+  - Enemy
   layers:
   - Default
   - TransparentFX
