@@ -3050,7 +3050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 10
   Chico: {fileID: 1145562121}
-  Toxica: {fileID: 0}
+  Toxica: {fileID: 118757180}
   ani: {fileID: 0}
   direccion: 0
   speed_run: 1
