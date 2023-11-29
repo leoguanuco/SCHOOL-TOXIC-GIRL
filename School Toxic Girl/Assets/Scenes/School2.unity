@@ -245,7 +245,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 741454085}
-  - {fileID: 638336844}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &124715233
@@ -1684,12 +1683,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638336843}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.22, y: -0.65, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.43000007, y: 1.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 118757181}
+  m_Father: {fileID: 741454085}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &650414409
 GameObject:
@@ -2072,7 +2071,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2053518115102101881, guid: 521aebf732701414da1c25c63cb8390b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 638336844}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2053518115102101880, guid: 521aebf732701414da1c25c63cb8390b, type: 3}
       insertIndex: -1
@@ -2116,7 +2118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controladorGolpe: {fileID: 638336844}
-  radioGolpe: 0.5
+  radioGolpe: 0.8
   "da\xF1oGolpe": 20
   tiempoEntreAtaques: 1
   tiempoSiguienteAtaque: 0
@@ -3869,7 +3871,7 @@ AudioSource:
   m_GameObject: {fileID: 2019093417}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5016d53c0bf95c542b462b8521ccdbe2, type: 2}
   m_audioClip: {fileID: 8300000, guid: 1ba7cf4812aab5044805ebe31e625de0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
